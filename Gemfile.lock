@@ -136,6 +136,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  addressable
   bootstrap (~> 4.0.0.alpha3)
   middleman (>= 4.0.0)
   middleman-compass (>= 4.0.0)

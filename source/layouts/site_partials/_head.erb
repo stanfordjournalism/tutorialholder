@@ -1,7 +1,17 @@
 <!doctype html>
 <html>
   <head>
-    <title><%= current_page.data.title || "TK Site" %></title>
+    <title><%= meta_title %></title>
+    <meta name="description" content="<%= meta_description %>" />
+    <meta name="author" content="<%= meta_authors %>" />
+    <link rel="canonical" href="<%= meta_url %>" />
+    <meta property="og:title" content="<%= meta_title %>" />
+    <meta property="og:url" content="<%= meta_url %>" />
+    <meta property="og:description" content="<%= meta_description %>" />
+    <meta property="og:site_name" content="<%= site_title %>"/>
+    <meta property="og:image" content="<%= meta_image_url %>" />
+    <meta property="og:type" content="<%=meta_page_type %>" />
+
 
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">

@@ -22,7 +22,9 @@ end
 ###
 
 set :layout, :page
-page 'tutorials/*.html', layout: 'article'
+page 'articles/*.html', layout: 'pages/article/article_layout'
+page 'tutorials/*.html', layout: 'pages/article/article_layout'
+page /\/slideshow/, layout: 'pages/slideshow/slideshow_layout'
 # Per-page layout changes:
 # With no layout
 page '/*.xml', layout: false

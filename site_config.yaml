@@ -1,7 +1,8 @@
 title: Stanford Boilerplate
 description: |
   This is a bunch of boilerplate
-author: Dan Nguyen
+authors:
+  - Dan Nguyen
 image_url: /assets/images/logo.png
 baseurl: "http://www.example.com"
 
