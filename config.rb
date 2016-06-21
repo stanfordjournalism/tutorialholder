@@ -1,7 +1,9 @@
 # General configuration
 require 'hashie'
+require 'pathname'
 activate :pry
 activate :directory_indexes
+activate :sprockets
 set :site_config, ::Hashie::Mash.new(YAML.load_file("./site_config.yaml"))
 
 

@@ -1,11 +1,22 @@
 <% wrap_layout :layout do %>
+<%= stylesheet_link_tag 'slideshow' %>
   <div class="reveal">
     <div class="slides">
       <section>
         <h1>REVEAL: <%= page_title %></h1>
+        <p>
+          Slide count: <%= page_slide_count %>
+        </p>
       </section>
 
+      <% page_slides.each do |slide| %>
+      <section>
+        <%= slide.render() %>
+      </section>
+      <% end %>
       <!--slides -->
     </div>
   </div>
+
+  <%= javascript_include_tag :slideshow %>
 <% end %>

@@ -13,7 +13,7 @@ gem 'middleman', '>= 4.0.0'
 gem 'middleman-livereload'
 gem 'middleman-compass', '>= 4.0.0'
 gem 'middleman-pry'
-
+gem "middleman-sprockets"
 # extra gems
 gem 'addressable'
 gem 'bootstrap', '~> 4.0.0.alpha3'
