@@ -1,5 +1,8 @@
 # helpers that override Traversal parent, children, siblings
 module PageTraversalHelpers
+  def page_is_literally_eponymous_path #
+    # checks for index.html
+  end
   def page_children
     # todo: make this extended_relations
     current_page.children
