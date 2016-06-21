@@ -1,19 +1,20 @@
 ---
-title: Tutorials and Other things
+title: Stanford Journalism Stuff
+layout: /layouts/pages/homepage/homepage_layout
 ---
 
-<h1><%= current_page.data.title %></h1>
+<section class="sec">
+  <div class="container">
+    <h1><%= current_page.data.title %></h1>
 
-<div>
-  <h2>Content</h2>
-  <% resources = sitemap.resources.select{|r| r.path =~ /tutorials\/.+?index/ } %>
-  <p><%=resources.length%> articles</p>
-  <ul>
-    <% resources.each do |resource| %>
-      <% article = resource.data %>
-      <li><%= link_to resource.data.title, resource.url %></li>
-    <% end %>
-  </ul>
-
-
-</div>
+      <h2>Content</h2>
+      <% resources = sitemap.resources.select{|r| r.path =~ /tutorials\/.+?index/ } %>
+      <p><%=resources.length%> articles</p>
+      <ul>
+        <% resources.each do |resource| %>
+          <% article = resource.data %>
+          <li><%= link_to resource.data.title, resource.url %></li>
+        <% end %>
+      </ul>
+  </div>
+</section>

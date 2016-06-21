@@ -1,6 +1,9 @@
 # General configuration
+require 'hashie'
 activate :pry
 activate :directory_indexes
+set :site_config, ::Hashie::Mash.new(YAML.load_file("./site_config.yaml"))
+
 
 # Reload the browser automatically whenever files change
 configure :development do
@@ -9,20 +12,9 @@ end
 
 # Build-specific configuration
 configure :build do
-  # Minify CSS on build
-  # activate :minify_css
-
-  # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_css
+  activate :minify_javascript
 end
-
-
-
-
-
-
-
-
 
 
 ##
@@ -30,21 +22,24 @@ end
 ###
 
 set :layout, :page
+page 'tutorials/*.html', layout: 'article'
 # Per-page layout changes:
 # With no layout
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-# With alternative layout
-# page "/path/to/file.html", layout: :otherlayout
 
-
-
+set :js_dir, 'assets/javascripts'
+set :css_dir, 'assets/stylesheets'
+set :images_dir, 'assets/images'
 
 ###
 # Helpers
 ###
+#
+# require 'helpers/media_helpers'
+# helpers MediaHelpers
 
 # Methods defined in the helpers block are available in templates
 # helpers do

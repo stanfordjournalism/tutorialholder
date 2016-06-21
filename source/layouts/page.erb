@@ -1,7 +1,5 @@
 <% wrap_layout :layout do %>
-  <h1>This is a page</h1>
-
+  <%= partial '/layouts/site_partials/header' %>
   <%= yield %>
-
-  <h2>done with page</h2>
+  <%= partial '/layouts/site_partials/footer' %>
 <% end %>
